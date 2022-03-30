@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: 'Sintony', sans-serif;
+}
+
+html {
+    font-size: 100%;
+}
+
+
+body {
+    background-color: #152341;
+    margin: 0;
+    display: flex;
+    background-image: url(../eberhard-grossgasteiger-fciOpCwnBqI-unsplash.jpg);
+    background-position: center center;
+    background-size: cover;
+    /* background-size:auto; */
+    flex-direction: column;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+}
+
+main {
+    position: relative;
+    color: beige;
+    display: flex;
+   
+    margin-top: 20rem;
+    margin-bottom: 20rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+main #clock-hour,
+#clock-minute,
+#clock-second,
+#day-of-the-week
+ {
+    display: flex;
+    margin: 5rem 2rem 1rem 3rem;
+
+     font-size: 4rem;
+     font-weight: bold;
+     text-shadow: 4px 4px 5px rgb(110, 109, 109);
+    align-items: center;
+}
+
+span#clock-hour,
+#clock-minute,
+#clock-second{
+    display: block;
+    text-align: center;
+}
+
+span.span-text {
+    display: block;
+    text-align:  center;
+
+}
+
+
+
+.photo-credit {
+    width: 30%;
+    position: relative;
+}
+.photo-credit small {
+/* margin-top: 12rem; */
+color: aliceblue;
+top:54rem;
+right: 3rem;
+font-size: 0.6rem;
+position: fixed;
+text-align: center;
+
+}
+
+.photo-credit a {
+    text-decoration:none;
+    font-size: 0.6rem;
+}
+
+
+.actual-clock {
+    position: absolute;
+    bottom: 70%;
+    /* padding: 2rem; */
+    height: 20rem;
+    width: 20rem;
+    background-color: transparent;
+    border: 2rem solid rgba(35, 82, 129, 0.9);
+    /* box-shadow: 4px 4px 5px rgb(110, 109, 109);; */
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(4, 6, 121, 0.699),
+        inset 0 0 0 3px #3d7ce9,
+
+        inset 0 0 10px rgb(12, 12, 12),
+
+        0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 50;
+    
+
+}
+
+.actual-clock::after{
+    content: '';
+    position: absolute;
+    z-index: 100;
+    background-color: rgba(50, 123, 196, 0.9);
+    border: 2px solid rgba(35, 82, 129, 0.9);
+    border-radius: 50%;
+    width: 0.8rem;
+    height: 0.8rem;
+    top: 48%;
+    left: 47%;
+
+
+}
+
+.hand {
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    position: absolute;
+    width: 50%;
+    right: 50%;
+    top: 50%;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.second-hand {
+    width: 6rem;
+    height: 0.2rem;
+    background-color: rgb(122, 121, 121);
+}
+
+.minute-hand {
+    /* margin-left: 0.5rem; */
+    /* margin-top: 7.5rem; */
+    /* position: absolute; */
+    /* top:133px; */
+    /* left: 18px; */
+  
+    width: 7rem;
+    height: 0.4rem;
+    background-color: #111;
+    /* transform-origin: 100%; */
+    /* transform: rotate(90deg); */
+   
+}
+
+
+
+/* #minute-hand {
+    animation: minute-hand 1s linear 1 forwards;
+} */
+
+/* @keyframes minute-hand {
+    from {
+        transform: rotate(0deg) translate(0px);
+    }
+    to {
+        transform: rotate(6deg) translate(0px);
+    }
+} */
+
+
+
+
+.hour-hand {
+    /* margin-left: 2.s5rem; */
+    /* margin-top: -3rem; */
+    /* position: absolute; */
+    /* top:133px; */
+    /* right: 127px; */
+  
+    width: 5rem;
+    height: 0.4rem;
+    background-color: rgb(80, 80, 80);
+    /* transform-origin: 100%; */
+    /* transform: rotate(90deg); */
+    
+}
+
+
+
+.day {
+    margin-bottom: 17rem;
+    position: absolute;
+top: 70%;
+text-align: center;
+}
